@@ -5,11 +5,11 @@ type this in your proyect to use it:
 `npm i -s react-minimalist-table`
 
 
-![alt text](public/table1.png)
+![alt full table](https://github.com/Cacilie/react-minimalist-table/blob/master/public/table1.png)
 
 it is fully responsive
 
-![alt text](public/table2.png)
+![alt responsive table](https://github.com/Cacilie/react-minimalist-table/blob/master/public/table2.png)
 
 ```
     <CTable 
