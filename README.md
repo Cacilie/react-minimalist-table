@@ -85,9 +85,13 @@ Where
 There are also another props like 
     `````
     headerColor: PropTypes.string,
+
     headerTextColor: PropTypes.string,
+
     primaryColor: PropTypes.string,
+
     secondaryColor: PropTypes.string,
+    
     `````
 
 
