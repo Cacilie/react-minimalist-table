@@ -9,8 +9,6 @@ type this in your proyect to use it:
 
 it is fully responsive
 
-![alt responsive table](https://github.com/Cacilie/react-minimalist-table/blob/master/public/table2.png)
-
 ```
     <CTable 
         caption={"Data"}
