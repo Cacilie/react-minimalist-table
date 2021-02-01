@@ -1,35 +1,8 @@
 import React from 'react'
 import './CTable.css'
 import PropTypes from 'prop-types';
-
-function CTableHeader(props){
-    const HEADERS = Object.keys(props.data[0]);
-
-    return (
-        <thead style={{backgroundColor: props.headerColor }}>
-            <tr style={{color: props.headerTextColor}}>
-                {HEADERS.map( (h, i) => {
-                    return <th key={i} scope="col">{h}</th>
-
-                })}
-            </tr>
-        </thead>
-    )
-}
-
-function CTableRow({data}){
-    const HEADERS = Object.keys(data[0]);
-
-    return data.map( (r , i) =>  {
-        return (
-            <tr key={i}>
-                {HEADERS.map( (h, j) => {
-                    return <td key={j} data-label={h}>{data[i][h]}</td>
-                })}
-            </tr>
-        )
-    })
-}
+import CTableHeader from './CTableHeader';
+import CTableRow from './CTableRow';
 
 export default function CTable(props) {
     return (
@@ -47,5 +20,13 @@ CTable.propTypes = {
     caption: PropTypes.string,
     data: PropTypes.arrayOf(PropTypes.object).isRequired,
     headerColor: PropTypes.string,
-    headerTextColor: PropTypes.string
+    headerTextColor: PropTypes.string,
+    primaryColor: PropTypes.string,
+    secondaryColor: PropTypes.string,
+    conditionalCellStyle: PropTypes.arrayOf(PropTypes.exact({
+        columns: PropTypes.arrayOf(PropTypes.string).isRequired,
+        styleTrue: PropTypes.object.isRequired,
+        styleFalse: PropTypes.object.isRequired,
+        validation: PropTypes.func.isRequired
+    }))
 }
