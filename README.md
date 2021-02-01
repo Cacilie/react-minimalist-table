@@ -37,6 +37,7 @@ it is fully responsive
 Where 
 
 **caption** *the title of your table*
+
 **data** just a json-array with the data you want to display,
 e.g
 ````
