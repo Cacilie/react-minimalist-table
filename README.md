@@ -83,7 +83,8 @@ Where
 
 
 There are also another props like 
-    `````
+    
+    
     headerColor: PropTypes.string,
 
     headerTextColor: PropTypes.string,
@@ -91,8 +92,8 @@ There are also another props like
     primaryColor: PropTypes.string,
 
     secondaryColor: PropTypes.string,
+
     
-    `````
 
 
 This is just a getting started guide, if you want deeper knowladge, i am writing a bigger documentation file that, as soons as i finished, i will share here.
