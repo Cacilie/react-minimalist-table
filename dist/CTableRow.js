@@ -3,7 +3,8 @@ export default function CTableRow({
   data,
   primaryColor,
   secondaryColor,
-  conditionalCellStyle
+  conditionalCellStyle,
+  cellTextColor
 }) {
   const HEADERS = data[0] ? Object.keys(data[0]) : [];
   return data.map((r, i) => {
@@ -16,7 +17,8 @@ export default function CTableRow({
       data: data,
       HEADERS: HEADERS,
       i: i,
-      conditionalCellStyle: conditionalCellStyle
+      conditionalCellStyle: conditionalCellStyle,
+      cellTextColor: cellTextColor
     }));
   });
 }
@@ -41,7 +43,7 @@ function Cell({
         }
       }
 
-      if (condition.validation && condition.validation(data[i][h])) cellStyle = condition.styleTrue;else cellStyle = condition.styleFalse;
+      if (condition.validation && condition.validation(data[i][h]) === true) cellStyle = condition.styleTrue;else if (condition.validation && condition.validation(data[i][h]) === false) cellStyle = condition.styleFalse;else cellStyle = condition.defaultStyle;
     }
 
     return /*#__PURE__*/React.createElement("td", {

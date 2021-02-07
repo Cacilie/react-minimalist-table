@@ -1,13 +1,13 @@
 import React from 'react'
 
-export default function CTableRow({data, primaryColor, secondaryColor, conditionalCellStyle}) {
+export default function CTableRow({data, primaryColor, secondaryColor, conditionalCellStyle, cellTextColor}) {
     const HEADERS = data[0] ? Object.keys(data[0]): [];
     
 
     return data.map( (r , i) =>  {
         return (
             <tr key={i} style={{backgroundColor: i % 2 === 0 ? primaryColor || "#fffafa" : secondaryColor || "#fff"}}>
-                <Cell data={data} HEADERS={HEADERS}  i={i} conditionalCellStyle={conditionalCellStyle}/>
+                <Cell data={data} HEADERS={HEADERS}  i={i} conditionalCellStyle={conditionalCellStyle} cellTextColor={cellTextColor} />
             </tr>
         )
     })
@@ -34,8 +34,9 @@ function Cell({HEADERS, data, i, conditionalCellStyle, cellTextColor}){
                 }
             }
 
-            if(condition.validation && condition.validation(data[i][h])) cellStyle = condition.styleTrue
-            else cellStyle = condition.styleFalse
+            if(condition.validation && condition.validation(data[i][h]) === true) cellStyle = condition.styleTrue
+            else if(condition.validation && condition.validation(data[i][h]) === false) cellStyle = condition.styleFalse
+            else cellStyle = condition.defaultStyle
         }
 
         return <td  style={cellStyle}  key={j} data-label={h}>{data[i][h]}</td>

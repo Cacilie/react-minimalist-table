@@ -1,6 +1,6 @@
 {
   "name": "react-minimalist-table",
-  "version": "0.8.0",
+  "version": "0.8.4",
   "private": false,
   "babel": {
     "presets": [
@@ -35,12 +35,16 @@
     ]
   },
   "devDependencies": {
-    "@babel/cli": "^7.12.10",
-    "@babel/preset-react": "^7.12.10"
+    "@babel/cli": "^7.12.13",
+    "@babel/core": "^7.12.13",
+    "@babel/preset-react": "^7.12.13"
   },
   "main": "dist/index.js",
   "module": "dist/index.js",
-  "files": [ "dist", "README.md" ],
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/Cacilie/react-minimalist-table"

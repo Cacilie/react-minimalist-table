@@ -26,6 +26,9 @@ it is fully responsive
             validation: function(value){
                 if(value  === 1) return true
                 else return false
+            },
+            defaultStyle: {
+                color: 'black
             } 
             }
         ]
@@ -69,6 +72,9 @@ conditionalCellStyle={
             validation: function(value){
                 if(value  === 1) return true
                 else return false
+            },
+            defaultStyle: {
+                color: 'black'
             } 
             }
         ]
@@ -79,7 +85,7 @@ Where
     **styleTrue** the style that is going to be applyed if the condition is matched
     **styleFalse** the style that is going to be applyed if the condition is mismatched,
     **validation** it is a function which must return true or false (indicating if the condition was matched)
-
+    **defaultStyle** it is the styñe that is going to be applyed if the result of the conditions is neither true nor false
 
 
 There are also another props like 

@@ -28,6 +28,7 @@ CTable.propTypes = {
         columns: PropTypes.arrayOf(PropTypes.string).isRequired,
         styleTrue: PropTypes.object.isRequired,
         styleFalse: PropTypes.object.isRequired,
-        validation: PropTypes.func.isRequired
+        validation: PropTypes.func.isRequired,
+        defaultStyle: PropTypes.object.isRequired,
     }))
 }
