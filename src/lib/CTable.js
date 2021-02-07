@@ -23,6 +23,7 @@ CTable.propTypes = {
     headerTextColor: PropTypes.string,
     primaryColor: PropTypes.string,
     secondaryColor: PropTypes.string,
+    cellTextColor: PropTypes.string,
     conditionalCellStyle: PropTypes.arrayOf(PropTypes.exact({
         columns: PropTypes.arrayOf(PropTypes.string).isRequired,
         styleTrue: PropTypes.object.isRequired,

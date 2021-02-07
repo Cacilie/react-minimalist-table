@@ -14,14 +14,16 @@ export default function CTableRow({data, primaryColor, secondaryColor, condition
 }
 
 
-function Cell({HEADERS, data, i, conditionalCellStyle}){
+function Cell({HEADERS, data, i, conditionalCellStyle, cellTextColor}){
 
 
     
 
     return HEADERS.map( (h, j) => {
 
-        let cellStyle = {}
+        let cellStyle = {
+            color: cellTextColor || 'black'
+        }
 
         let condition = {}
 

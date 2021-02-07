@@ -93,6 +93,9 @@ There are also another props like
 
     secondaryColor: PropTypes.string,
 
+    cellTextColor: PropTypes.string,
+
+
     
 
 

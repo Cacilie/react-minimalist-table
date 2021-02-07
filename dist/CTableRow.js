@@ -25,10 +25,13 @@ function Cell({
   HEADERS,
   data,
   i,
-  conditionalCellStyle
+  conditionalCellStyle,
+  cellTextColor
 }) {
   return HEADERS.map((h, j) => {
-    let cellStyle = {};
+    let cellStyle = {
+      color: cellTextColor || 'black'
+    };
     let condition = {};
 
     if (conditionalCellStyle && conditionalCellStyle.length > 0) {
