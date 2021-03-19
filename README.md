@@ -28,7 +28,7 @@ it is fully responsive
                 else return false
             },
             defaultStyle: {
-                color: 'black
+                color: 'black'
             } 
             }
         ]
