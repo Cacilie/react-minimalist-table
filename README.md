@@ -1,13 +1,15 @@
 # A minimalist full responsive react table
+[Full documentation (really recommended)](https://cacilie.gitbook.io/react-minimalist-table/)
+
 
 ## Getting started
-type this in your proyect to use it:
+Type this in your proyect to use it:
 `npm i -s react-minimalist-table`
 
 
 ![alt full table](https://github.com/Cacilie/react-minimalist-table/blob/master/public/table1.png)
 
-it is fully responsive
+It is fully responsive
 
 ```
     <CTable 
