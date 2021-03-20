@@ -1,7 +1,5 @@
 ---
-description: >-
-  Get started using this fully responsive minimalist react table. Please take a
-  look at the full Documentation in which a lot of the functionality is showed.
+description: Minimalist fully responsive table for ReactJS by Cacilie
 ---
 
 # Getting started
