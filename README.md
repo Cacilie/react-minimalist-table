@@ -1,113 +1,62 @@
-# A minimalist full responsive react table
-[Full documentation (really recommended)](https://cacilie.gitbook.io/react-minimalist-table/)
+---
+description: Get started using this fully responsive minimalist react table.
+---
 
+# Getting started
 
-## Getting started
-Type this in your proyect to use it:
-`npm i -s react-minimalist-table`
+## Installing.
 
-
-![alt full table](https://github.com/Cacilie/react-minimalist-table/blob/master/public/table1.png)
-
-It is fully responsive
-
-```
-    <CTable 
-        caption={"Data"}
-        data={Data}
-        conditionalCellStyle={
-        [
-            {
-            columns: ['id'],
-            styleTrue: {
-                color: 'red'
-            },
-            styleFalse: {
-                color: 'green'
-            },
-            validation: function(value){
-                if(value  === 1) return true
-                else return false
-            },
-            defaultStyle: {
-                color: 'black'
-            } 
-            }
-        ]
-        }
-    />
-
+```text
+npm i -s react-minimalist-table
 ```
 
-Where 
+Copy this code at you project in order to have a fully responsive table.
 
-**caption** *the title of your table*
+```javascript
+import './App.css';
+import {CTable} from 'react-minimalist-table';
+import {useEffect, useState} from 'react';
 
-**data** just a json-array with the data you want to display,
-e.g
-````
+function App() {
 
-    [{
-        columnName: cellValue,
-        columnName2: cellValue2,
-    }]
-`````
+  const [Data, setData] = useState([])
+   
+  useEffect(() => {
+    fetch('https://jsonplaceholder.typicode.com/posts')
+    .then(response => response.json())
+    .then(json => setData(json))
+  }, [])
 
-**conditionalCellStyle** *It is possible to add some conditional styles to the cells of the table*
+  return (
+    <div className="App">
+        <CTable 
+          caption={"Data"}
+          data={Data}
+        />
+    </div>
+  );
+}
 
-e.g.
+export default App;
 
-If you want to color the text of a cell if the value of that cell is 1,
+```
 
+![](.gitbook/assets/image.png)
 
-````
-conditionalCellStyle={
-        [
-            {
-            columns: ['id'],
-            styleTrue: {
-                color: 'red'
-            },
-            styleFalse: {
-                color: 'green'
-            },
-            validation: function(value){
-                if(value  === 1) return true
-                else return false
-            },
-            defaultStyle: {
-                color: 'black'
-            } 
-            }
-        ]
-````
+![](.gitbook/assets/image%20%281%29.png)
 
-Where 
-    **columns** are the columns that are affected by this conditional style, 
-    **styleTrue** the style that is going to be applyed if the condition is matched
-    **styleFalse** the style that is going to be applyed if the condition is mismatched,
-    **validation** it is a function which must return true or false (indicating if the condition was matched)
-    **defaultStyle** it is the styñe that is going to be applyed if the result of the conditions is neither true nor false
+#### Props.
 
+| caption | Title of the table to be displayed |
+| :--- | :--- |
+| data | JSON array with the data to be displayed |
 
-There are also another props like 
-    
-    
-    headerColor: PropTypes.string,
+#### Data example.
 
-    headerTextColor: PropTypes.string,
-
-    primaryColor: PropTypes.string,
-
-    secondaryColor: PropTypes.string,
-
-    cellTextColor: PropTypes.string,
-
-
-    
-
-
-This is just a getting started guide, if you want deeper knowladge, i am writing a bigger documentation file that, as soons as i finished, i will share here.
-
-Thank you very much for using this Package, i hope it help you.
+```javascript
+[{
+    columnName: cellValue,
+    columnName2: cellValue2,
+}]
+```
 
