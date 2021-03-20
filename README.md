@@ -4,7 +4,9 @@ description: Get started using this fully responsive minimalist react table.
 
 # Getting started
 
-## Installing.
+> Full Documentation at [https://cacilie.gitbook.io/react-minimalist-table/](https://cacilie.gitbook.io/react-minimalist-table/)
+
+Installing.
 
 ```text
 npm i -s react-minimalist-table
