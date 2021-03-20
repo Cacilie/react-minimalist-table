@@ -45,10 +45,6 @@ export default App;
 
 ```
 
-![](.gitbook/assets/image.png)
-
-![](.gitbook/assets/image%20%281%29.png)
-
 #### Props.
 
 | caption | Title of the table to be displayed |
@@ -65,6 +61,8 @@ export default App;
 ```
 
 > CodeSanbox example: [https://codesandbox.io/s/react-minimimalist-table-simple-sample-d0kxk?file=/src/App.js](https://codesandbox.io/s/react-minimimalist-table-simple-sample-d0kxk?file=/src/App.js)
+
+![](.gitbook/assets/image%20%282%29.png)
 
 
 
