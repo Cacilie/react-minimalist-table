@@ -62,3 +62,7 @@ export default App;
 }]
 ```
 
+> CodeSanbox example: [https://codesandbox.io/s/react-minimimalist-table-simple-sample-d0kxk?file=/src/App.js](https://codesandbox.io/s/react-minimimalist-table-simple-sample-d0kxk?file=/src/App.js)
+
+
+
