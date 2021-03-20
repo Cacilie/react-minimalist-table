@@ -1,6 +1,5 @@
 .cTable {
-    border: 1px solid #ccc;
-    border-collapse: collapse;
+    border-spacing: 0;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -16,21 +15,50 @@
     padding: .35em;
 }
 
+.cTable td {
+    border-bottom: 0.5px solid rgba(34, 36, 38, .1);
+    border-left: 0.5px solid rgba(34, 36, 38, .1);
+}
+
+.cTable td:first-child {
+    border-left: none;
+}
+
 .cTable th,
 .cTable td {
-    padding: .625em;
+    padding: 2em;
     text-align: center;
 }
+
 
 .cTable th {
     font-size: .85em;
     letter-spacing: .1em;
     text-transform: uppercase;
+    border-top: 0.5px solid rgba(34, 36, 38, .1);
+    border-bottom: 0.5px solid rgba(34, 36, 38, .1);
+}
+
+
+.cTable th:first-child {
+    border-left: 0.5px solid rgba(34, 36, 38, .1);
+}
+
+.cTable th:last-child {
+    border-right: 0.5px solid rgba(34, 36, 38, .1);
+}
+
+.cTable td:first-child {
+    border-left: 0.5px solid rgba(34, 36, 38, .1);
+}
+
+.cTable td:last-child {
+    border-right: 0.5px solid rgba(34, 36, 38, .1);
 }
 
 @media screen and (max-width: 600px) {
     .cTable {
-        border: 0;
+        border: 0.5px solid rgba(34, 36, 38, .1);
     }
 
     .cTable caption {
@@ -46,18 +74,24 @@
         padding: 0;
         position: absolute;
         width: 1px;
+
     }
 
     .cTable tr {
         display: block;
         margin-bottom: .625em;
+        border-bottom: 0.5px solid rgba(34, 36, 38, .1);
+    }
+
+    .cTable tr:last-child {
+        border-bottom: none;
     }
 
     .cTable td {
         display: block;
         font-size: .8em;
         text-align: right;
-        border: 0.1em solid #ccc;
+        border: none !important;
 
     }
 
@@ -66,11 +100,11 @@
         float: left;
         font-weight: bold;
         text-transform: uppercase;
+        border: none;
     }
 
     .cTable td:last-child {
-        border-bottom: 0;
-        border: 0.1em solid #ccc;
+        border: none;
 
     }
 }

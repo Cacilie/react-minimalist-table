@@ -13,27 +13,10 @@ function App() {
   }, [])
 
   return (
-    <div className="App">
+    <div className="App"  >
         <CTable 
           caption={"Data"}
           data={Data}
-          conditionalCellStyle={
-            [
-              {
-                columns: ['id'],
-                styleTrue: {
-                  color: 'red'
-                },
-                styleFalse: {
-                  color: 'green'
-                },
-                validation: function(value){
-                  if(value  === 1) return true
-                  else return false
-                } 
-              }
-            ]
-          }
         />
     </div>
   );
