@@ -1,6 +1,10 @@
 {
   "name": "react-minimalist-table",
   "version": "0.8.6",
+  "author": {
+    "name": "Edgar Arroyo",
+    "url": "https://cacilie.github.io"
+  },
   "private": false,
   "babel": {
     "presets": [
