@@ -1,2 +1,3 @@
 import CTable from './CTable';
-export {CTable}
+import TableContainer from './TableContainer';
+export { CTable, TableContainer }

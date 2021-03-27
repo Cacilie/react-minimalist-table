@@ -1,23 +1,41 @@
 import './App.css';
-import {CTable} from './lib';
-import {useEffect, useState} from 'react';
+import { CTable, TableContainer } from './lib';
+import { useEffect, useState } from 'react';
 
 function App() {
 
-  const [Data, setData] = useState([])
-   
-  useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/posts')
-    .then(response => response.json())
-    .then(json => setData(json))
-  }, [])
+  const DATA = [
+    {
+      "name": "Leanne Graham",
+      "username": "Bret",
+      "email": "Sincere@april.biz",
+    },
+    {
+      "name": "Ervin Howell",
+      "username": "Antonette",
+      "email": "Shanna@melissa.tv"
+    },
+    {
+      "name": "Clementine Bauch",
+      "username": "Samantha",
+      "email": "Nathan@yesenia.net",
+    },
+  ]
 
   return (
-    <div className="App"  >
-        <CTable 
-          caption={"Data"}
-          data={Data}
+    <div style={{
+      display: 'flex',
+      justifyContent: 'center',
+      padding: 30
+    }}>
+      <TableContainer>
+        <CTable
+          headerColor={'#c7b800'}
+          primaryColor={'#ffff56'}
+          secondaryColor={'#ffea00'}
+          data={DATA}
         />
+      </TableContainer>
     </div>
   );
 }
