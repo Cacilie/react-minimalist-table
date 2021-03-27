@@ -64,5 +64,5 @@ export default function App() {
 | `validation` | Function that must return true or false in order to apply a style. Is the parameter as the current cell value in order to define the styling rule. |
 | `defaultStyle` | Style if validations do not return true nor false |
 
-
+> CodeSandbox example [https://codesandbox.io/s/crimson-sky-4vxdf?file=/src/App.js](https://codesandbox.io/s/crimson-sky-4vxdf?file=/src/App.js)
 
