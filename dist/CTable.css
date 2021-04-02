@@ -18,6 +18,7 @@
 .cTable td {
     border-bottom: 0.5px solid rgba(34, 36, 38, .1);
     border-left: 0.5px solid rgba(34, 36, 38, .1);
+    word-wrap: break-word;
 }
 
 .cTable td:first-child {
