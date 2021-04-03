@@ -52,5 +52,13 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/Cacilie/react-minimalist-table"
-  }
+  },
+  "license": "ISC",
+  "keywords": [
+    "react",
+    "table",
+    "minimalist",
+    "responsive",
+    "easy"
+  ]
 }
